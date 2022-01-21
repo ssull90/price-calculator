@@ -1,8 +1,12 @@
 import React from "react";
+import Product from "./Product";
 
 const Register = () => {
     return (
-        <p>Register Placeholder</p>
+        <div>
+            <Product />
+            <Product />
+        </div>
     )
 }
 
