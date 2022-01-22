@@ -1,12 +1,17 @@
 import React from "react";
 import Product from "./Product";
+import styled from "styled-components";
 
-const Register = () => {
+const RegisterContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+
+const Register = ({ productList }) => {
     return (
-        <div>
-            <Product />
-            <Product />
-        </div>
+        <RegisterContainer>
+            {productList.map(product => (<Product product={product} key={`${product.name}-${product.id}`} />))}
+        </RegisterContainer>
     )
 }
 

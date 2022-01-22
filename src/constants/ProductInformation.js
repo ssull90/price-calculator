@@ -23,13 +23,13 @@ const PRODUCT_INFORMATION = [
         id: 2,
         name: 'Banana',
         unitPrice: 0.99,
-        imageURL: '/bread.png'
+        imageURL: '/banana.png'
     },
     {
         id: 3,
         name: 'Apple',
         unitPrice: 0.89,
-        imageURL: '/bread.png'
+        imageURL: '/apple.png'
     },
 ]
 

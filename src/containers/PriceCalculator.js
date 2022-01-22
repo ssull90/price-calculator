@@ -7,12 +7,13 @@ import PRODUCT_INFORMATION from "../constants/ProductInformation";
 const PriceCalculatorContainer = styled.div`
     width: 100%;
     display: grid;
+    grid-template-columns: [column1] 50% [column2] 50%;
 `
 
 const PriceCalculator = () => {
     return (
         <PriceCalculatorContainer>
-            <Register />
+            <Register productList={PRODUCT_INFORMATION} />
             <Checkout />
         </PriceCalculatorContainer>
     )
