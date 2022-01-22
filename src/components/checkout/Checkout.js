@@ -2,7 +2,10 @@ import React from "react";
 
 const Checkout = () => {
     return (
-        <p>Checkout Placeholder</p>
+        <div>
+            <h2>Checkout Summary</h2>
+            <p>Checkout Placeholder</p>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../shared/Button";
 
 const ProductCard = styled.div`
     // width: 100px;
@@ -24,7 +25,7 @@ const Product = ({ product }) => {
             <ImageContainer>
                 <ProductImage src={product.imageURL} alt={product.name} key={product.name} />
             </ImageContainer>
-            <button>Add to cart</button>
+            <Button>Add to cart</Button>
         </ProductCard>
     )
 }

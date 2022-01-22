@@ -33,4 +33,6 @@ const PRODUCT_INFORMATION = [
     },
 ]
 
-export default PRODUCT_INFORMATION;
+const FOOTER_HEIGHT = '30px'
+
+export { PRODUCT_INFORMATION, FOOTER_HEIGHT };

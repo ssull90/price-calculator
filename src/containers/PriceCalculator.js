@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Register from "../components/register/Register";
 import Checkout from "../components/checkout/Checkout";
-import PRODUCT_INFORMATION from "../constants/ProductInformation";
+import { PRODUCT_INFORMATION } from "../constants/constants";
 
 const PriceCalculatorContainer = styled.div`
     width: 100%;
