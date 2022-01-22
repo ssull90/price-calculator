@@ -18,14 +18,17 @@ const ProductImage = styled.img`
     max-height: 150px;
 `
 
-const Product = ({ product }) => {
-    console.log(product)
+const Product = ({ product, addToCart }) => {
+    const handleButtonPress = () => {
+        addToCart(product.id, 1)
+    }
+
     return (
         <ProductCard>
             <ImageContainer>
                 <ProductImage src={product.imageURL} alt={product.name} key={product.name} />
             </ImageContainer>
-            <Button>Add to cart</Button>
+            <Button onClick={handleButtonPress}>Add to cart</Button>
         </ProductCard>
     )
 }

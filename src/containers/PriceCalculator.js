@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Register from "../components/register/Register";
 import Checkout from "../components/checkout/Checkout";
@@ -11,10 +11,24 @@ const PriceCalculatorContainer = styled.div`
 `
 
 const PriceCalculator = () => {
+    const [shoppingCart, setShoppingCart] = useState({})
+
+    const addToCart = (id, quantity) => {
+        let newShoppingCart = { ...shoppingCart }
+        if (shoppingCart[id]) {
+            newShoppingCart[id] = newShoppingCart[id] + quantity
+        } else {
+            newShoppingCart[id] = quantity
+        }
+        setShoppingCart(newShoppingCart)
+    }
+
+
+    // Passing in PRODUCT_INFORMATION this way to simulate non-static rest data
     return (
         <PriceCalculatorContainer>
-            <Register productList={PRODUCT_INFORMATION} />
-            <Checkout />
+            <Register productList={PRODUCT_INFORMATION} addToCart={addToCart} />
+            <Checkout shoppingCart={shoppingCart} productList={PRODUCT_INFORMATION} />
         </PriceCalculatorContainer>
     )
 }

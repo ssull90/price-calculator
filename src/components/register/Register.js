@@ -7,10 +7,16 @@ const RegisterContainer = styled.div`
     flex-wrap: wrap;
 `
 
-const Register = ({ productList }) => {
+const Register = ({ productList, addToCart }) => {
     return (
         <RegisterContainer>
-            {productList.map(product => (<Product product={product} key={`${product.name}-${product.id}`} />))}
+            {productList.map(product => (
+                <Product
+                    product={product}
+                    addToCart={addToCart}
+                    key={`${product.name}-${product.id}`}
+                />
+            ))}
         </RegisterContainer>
     )
 }
