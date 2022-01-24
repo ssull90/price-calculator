@@ -6,6 +6,7 @@ const StyledButton = styled.button`
     color: white;
     padding: 10px;
     border-radius: 10px;
+    width: 100%;
 `
 
 const Button = ({ children, onClick }) => {

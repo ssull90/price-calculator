@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// A more complicated but more scalable function would simply check the difference from previous list and make the adjustments
 const findPriceWithSales = (productInfo, quantity) => {
     let totalPrice = 0
     let moneySaved = 0
@@ -24,6 +23,7 @@ const Checkout = ({ shoppingCart = [], productList = [] }) => {
     const [totalMoneySaved, setTotalMoneySaved] = useState(0)
 
     useEffect(() => {
+        // A more complicated but more scalable function would simply check the difference from previous list and make the adjustments
         // When product list changes we recalculate the total values.
         let finalPrice = 0
         let moneySaved = 0
